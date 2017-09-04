@@ -18,4 +18,7 @@ export class UsersComponent {
 interface User {
     UserId: number;
     Username: string;
+    Email: string;
+    Firstname: string;
+    Lastname: string;
 }

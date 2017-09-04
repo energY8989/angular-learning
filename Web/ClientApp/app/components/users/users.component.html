@@ -9,12 +9,18 @@
         <tr>
             <th>UserId</th>
             <th>Name</th>
+            <th>Email</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let user of users">
             <td>{{ user.UserId }}</td>
             <td>{{ user.Username }}</td>
+            <td>{{ user.Email }}</td>
+            <td>{{ user.Firstname }}</td>
+            <td>{{ user.Lastname }}</td>
         </tr>
     </tbody>
 </table>

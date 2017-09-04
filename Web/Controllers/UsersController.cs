@@ -16,11 +16,18 @@ namespace Web.Controllers
 
 
         [HttpGet("All")]
-        public async Task<IEnumerable<User>> GetAllUsersAsync()
+        public async Task<IEnumerable<Interfaces.Json.Users>> GetAllUsersAsync()
         {
             var users = await UserStore.GetAllAsync();
 
-            return users;
+            return users.Select(u => new Interfaces.Json.Users
+            {
+                Email = u.Email,
+                Firstname = u.Firstname,
+                Lastname = u.Lastname,
+                UserId = u.UserId,
+                Username = u.Username
+            });
         }
     }
 }

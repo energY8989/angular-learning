@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+    protected title : string = "Test";
+
     constructor()
     {
         

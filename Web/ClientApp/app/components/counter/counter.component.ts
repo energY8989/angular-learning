@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 export class CounterComponent {
     public currentCount = 0;
 
+    public counterClicked = false;
+
     public incrementCounter() {
         this.currentCount++;
+
+        this.counterClicked = this.currentCount > 0
     }
 }

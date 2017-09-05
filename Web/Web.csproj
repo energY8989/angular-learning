@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\users\users.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\users\users.component.ts" />
   </ItemGroup>
 

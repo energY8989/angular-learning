@@ -1,0 +1,41 @@
+<p>
+  role works! Hello!!!<b>{{Role.Name}}</b>!!<br>
+  {{Role.IsAdmin}}
+  <span *ngIf="Role.IsAdmin" class="glyphicon glyphicon-ok"></span>
+
+  <br>
+  {{Role.Description}}
+</p>
+
+<button (click)="onClick()">Test</button>
+
+<form>
+  <div>
+    <label for="Name">Name</label><br>
+    <input type="text" [(ngModel)]="Role.Name" name="Name">
+  </div>
+
+  <div>
+    <label for="Description">Description</label><br>
+    <input type="text" [(ngModel)]="Role.Description" name="Description">
+  </div>
+
+  <div>
+    <label for="IsAdmin">IsAdmin</label><br>
+    <input type="checkbox" [(ngModel)]="Role.IsAdmin" name="IsAdmin">
+  </div>
+</form>
+<br>
+<br>
+<ul>
+  <li *ngFor="let hobby of Hobbies">
+    {{hobby}} <button (click)="deleteHobby(hobby)">x</button>
+  </li>
+</ul>
+
+<form (submit)="addHobby(hobby.value)">
+  <div>
+    <label for="hobby">Hobby</label>
+    <input type="text" #hobby>
+  </div>
+</form>

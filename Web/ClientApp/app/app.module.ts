@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -11,8 +11,9 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 
 import { UsersComponent } from './components/users/users.component';
-import { FormulaComponent } from './components/formula/formula.component';
-import { TestComponent } from './components/test/test.component';
+import { RoleComponent } from './components/role/role.component';
+
+import {DataService} from './services/data.service';
 
 @NgModule({
     declarations: [
@@ -22,8 +23,7 @@ import { TestComponent } from './components/test/test.component';
         FetchDataComponent,
         HomeComponent,
         UsersComponent,
-        FormulaComponent,
-        TestComponent
+        RoleComponent
     ],
     imports: [
         CommonModule,
@@ -37,7 +37,8 @@ import { TestComponent } from './components/test/test.component';
             { path: 'users', component: UsersComponent },
             { path: '**', redirectTo: 'home' }
         ])
-    ]
+    ],
+    providers: [DataService]
 })
 export class AppModuleShared {
 }

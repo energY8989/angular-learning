@@ -1,0 +1,17 @@
+<p>
+  cssclass works!
+</p>
+
+<h4 [class.special]="isSpecial">This class is special</h4>
+
+<h4 [ngClass]="currentClasses">
+  This div is initially special and saveable
+</h4>
+
+<hr>
+
+<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+
+Fontsize denepents in Special
+
+</div>

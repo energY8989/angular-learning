@@ -1,0 +1,53 @@
+<p>
+  modelbinding works!
+</p>
+
+<div class="container" style="display: none;">
+
+  <form>
+
+    <div class="form-group">
+      <label for="">Name</label>
+      <input type="text" class="form-control" [(ngModel)]="name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="">Age</label>
+      <input type="number" class="form-control" [(ngModel)]="age" name="age">
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-success">
+
+  </form>
+
+  <h4>Name: {{name}}</h4>
+  <h4>Age: {{age}}</h4>
+
+</div>
+
+
+<div class="container">
+
+  <form (submit)="onSubmit()">
+
+    <div class="form-group">
+
+      <label for="">Name</label>
+      <input [(ngModel)]="name" name="name" type="text" class="form-control">
+
+    </div>
+
+    <input type="submit" class="btn btn-success" value="submit">
+
+  </form>
+
+  <hr>
+
+  <ul class="list-group">
+
+    <li class="list-group-item" *ngFor="let user of users">{{user}}</li>
+
+  </ul>
+
+
+</div>

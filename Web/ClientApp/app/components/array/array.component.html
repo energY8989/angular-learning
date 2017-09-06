@@ -1,0 +1,22 @@
+<h1>Hello World!</h1>
+
+<!-- {{people}} -->
+<span *ngIf="showName; else noName">
+        <p>Hallo {{name}}</p>
+</span>
+
+<ng-template #noName><p>No Name</p></ng-template>
+
+
+<ul>
+    <li *ngFor="let person of people; let i = index">
+        {{i + 1}} {{person}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let person of people2; let i = index">
+        {{person.firstname}}
+        {{person.lastname}}
+    </li>
+</ul>

@@ -1,0 +1,17 @@
+<p>
+  pipes works!
+</p>
+
+<p>My Birthday is {{birthday | date | uppercase}}</p>
+<p>My Birthday is {{birthday | date:"MM-dd-yy" }}</p>
+<p>My Birthday is {{birthday | date:"dd.MM.yyyy" }}</p>
+<hr>
+
+<p>Ich mag {{'kuchen' | uppercase}}</p>
+
+<p>Ich mag keine {{'KATZEN' | lowercase}}</p>
+
+<hr>
+
+<p>Your total is {{total | currency:"EUR":"1"}}</p>
+<p>Our fee is {{fee |  percent }}</p>

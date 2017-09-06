@@ -1,0 +1,14 @@
+<p>
+  events works!
+</p>
+
+<button (click)="fireEvent($event, 'hallo')">Click</button>
+
+<hr>
+
+<button (click)="changeValue()" >ChangeValue</button>
+
+<div *ngIf="value">
+    <h1>{{text}}</h1>
+</div>
+

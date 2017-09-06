@@ -13,7 +13,14 @@ import { CounterComponent } from './components/counter/counter.component';
 import { UsersComponent } from './components/users/users.component';
 import { RoleComponent } from './components/role/role.component';
 
-import {DataService} from './services/data.service';
+import { DataService } from './services/data.service';
+import { ArrayComponent } from './components/array/array.component';
+import { BindingComponent } from './components/binding/binding.component';
+import { CssclassComponent } from './components/cssclass/cssclass.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { EventsComponent } from './components/events/events.component';
+import { ModelbindingComponent } from './components/modelbinding/modelbinding.component';
+import { ModelvalidationComponent } from './components/modelvalidation/modelvalidation.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +30,14 @@ import {DataService} from './services/data.service';
         FetchDataComponent,
         HomeComponent,
         UsersComponent,
-        RoleComponent
+        RoleComponent,
+        ArrayComponent,
+        BindingComponent,
+        CssclassComponent,
+        PipesComponent,
+        EventsComponent,
+        ModelbindingComponent,
+        ModelvalidationComponent
     ],
     imports: [
         CommonModule,
@@ -35,6 +49,13 @@ import {DataService} from './services/data.service';
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'users', component: UsersComponent },
+            { path: 'array', component: ArrayComponent },
+            { path: 'binding', component: BindingComponent },
+            { path: 'cssclass', component: CssclassComponent },
+            { path: 'pipes', component: PipesComponent },
+            { path: 'events', component: EventsComponent },
+            { path: 'modelbinding', component: ModelbindingComponent },
+            { path: 'modelvalidation', component: ModelvalidationComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ],

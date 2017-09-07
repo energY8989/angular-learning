@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'array',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArrayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) {
+
+    var users = userService.getUsers();
+
+    users.forEach(user => {
+      this.people.push(user);
+    });
+
+
+    userService.getData().subscribe(result => {
+
+      this.people.push(`Neuer Subscibe ${result}`);
+
+    });
+
+  }
 
   ngOnInit() {
+
   }
 
   name = "Paul";

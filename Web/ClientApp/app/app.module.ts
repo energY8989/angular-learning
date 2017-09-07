@@ -21,6 +21,10 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { EventsComponent } from './components/events/events.component';
 import { ModelbindingComponent } from './components/modelbinding/modelbinding.component';
 import { ModelvalidationComponent } from './components/modelvalidation/modelvalidation.component';
+import { UserService } from './services/user.service';
+import { HttpService } from './services/http.service';
+import { HttpComponent } from './components/http/http.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 @NgModule({
     declarations: [
@@ -37,7 +41,9 @@ import { ModelvalidationComponent } from './components/modelvalidation/modelvali
         PipesComponent,
         EventsComponent,
         ModelbindingComponent,
-        ModelvalidationComponent
+        ModelvalidationComponent,
+        HttpComponent,
+        UserDetailsComponent
     ],
     imports: [
         CommonModule,
@@ -56,10 +62,16 @@ import { ModelvalidationComponent } from './components/modelvalidation/modelvali
             { path: 'events', component: EventsComponent },
             { path: 'modelbinding', component: ModelbindingComponent },
             { path: 'modelvalidation', component: ModelvalidationComponent },
+            { path: 'http', component: HttpComponent },
+            { path: 'user/:id', component: UserDetailsComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ],
-    providers: [DataService]
+    providers: [
+        DataService,
+        UserService,
+        HttpService
+    ]
 })
 export class AppModuleShared {
 }
